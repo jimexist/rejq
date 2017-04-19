@@ -1,17 +1,16 @@
 opam-version: "1.2"
-name: "ReasonNativeProject"
+name: "rejq"
 version: "0.0.1"
-maintainer: "Jordan Walke <jordojw@gmail.com>"
+maintainer: "Jiayu Liu <etareduce@gmail.com>"
 authors: [
-  "Jordan Walke <jordojw@gmail.com>"
-  "Maxwell Bernstein <max@bernsteinbear.com>"
+  "Jiayu Liu <etareduce@gmail.com>"
 ]
-license: "BSD"
-homepage: "https://github.com/reasonml/ReasonNativeProject"
-doc: "https://reasonml.github.io/ReasonNativeProject/"
-bug-reports: "https://github.com/reasonml/ReasonNativeProject/issues"
-dev-repo: "git://github.com/reasonml/ReasonNativeProject.git"
-tags: [ "reason" "example" ]
+license: "MIT"
+homepage: "https://github.com/Jimexist/rejq"
+doc: "https://github.com/Jimexist/rejq"
+bug-reports: "https://github.com/Jimexist/rejq/issues"
+dev-repo: "git@github.com:Jimexist/rejq.git"
+tags: [ "reason" "jq" ]
 substs: [ "pkg/META" ]
 build: [
   [make "build"]

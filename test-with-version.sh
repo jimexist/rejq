@@ -8,7 +8,7 @@ make clean
 opam switch "${OCAML_VERSION}"
 eval `opam config env`
 opam update
-opam pin add -y ReasonNativeProject .
+opam pin add -y rejq .
 make
 ./test.native
 git diff --exit-code

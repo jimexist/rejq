@@ -10,8 +10,8 @@ release:
 	git add package.json opam
 	git commit -m "Version $(version)"
 	git tag -a $(version) -m "Version $(version)."
-	git push "git@github.com:reasonml/ReasonNativeProject.git"
-	git push "git@github.com:reasonml/ReasonNativeProject.git" tag $(version)
+	git push "git@github.com:Jimexist/rejq.git"
+	git push "git@github.com:Jimexist/rejq.git" tag $(version)
 
 clean:
 	ocamlbuild -clean

@@ -1,7 +1,7 @@
-# Copyright (c) 2015-present, Facebook, Inc. All rights reserved.
+# Copyright (c) 2015-present, Jiayu Liu. All rights reserved.
 
 version = "%{version}%"
-description = "ReasonNativeProject: Example project for Reason"
+description = "rejq: jq implemented in Reason"
 
-archive(byte) = "ReasonNativeProject.cma"
-archive(native) = "ReasonNativeProject.cmxa"
+archive(byte) = "rejq.cma"
+archive(native) = "rejq.cmxa"
