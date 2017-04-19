@@ -1,6 +1,7 @@
-/**
- * Welcome to Reason.
- */
+open Yojson;
+
+open MenhirLib;
+
 print_string "!!!!!!\n";
 
 let msg = "Hello Reason!";
