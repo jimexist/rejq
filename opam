@@ -18,5 +18,6 @@ build: [
 depends: [
   "topkg"   {>=  "0.8.1" & < "0.9"}
   "reason"  {= "1.13.3"}
+  "menhir"  {= "20170101"}
 ]
 available: [ ocaml-version >= "4.02" & ocaml-version < "4.05" ]

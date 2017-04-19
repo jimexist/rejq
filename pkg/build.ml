@@ -13,5 +13,5 @@ let () =
   Pkg.describe "rejq" ~build ~change_logs:[] ~licenses:[] ~readmes:[] (fun c ->
     Ok [
       Pkg.lib "pkg/META";
-      Pkg.bin ~auto:true ~dst:"test" "src/test";
+      Pkg.bin ~auto:true ~dst:"rejq" "src/rejq";
     ])
