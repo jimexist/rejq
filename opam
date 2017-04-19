@@ -16,7 +16,7 @@ build: [
   [make "build"]
 ]
 depends: [
-  "topkg"   {>=  "0.8.1" & < "0.9"}
+  "topkg"   {>= "0.8.1" & < "0.9"}
   "reason"  {= "1.13.3"}
   "menhir"  {= "20170101"}
   "yojson"  {= "1.3.3"}
