@@ -10,5 +10,5 @@ eval `opam config env`
 opam update
 opam pin add -y rejq .
 make
-./test.native
+./rejq.native
 git diff --exit-code
