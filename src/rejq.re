@@ -1,13 +1,18 @@
-open Yojson;
+let rejq filter => Printf.printf "got filter '%s'" filter;
 
-open MenhirLib;
+let filter = {
+  open Cmdliner;
+  let doc = "<jq filter>";
+  let docv = "<jq filter>";
+  Arg.(required & pos 0 (some string) None & info [] ::docv ::doc)
+};
 
-print_string "!!!!!!\n";
+let cmd = {
+  open Cmdliner;
+  let doc = "";
+  let version = "%%VERSION%%";
+  let exits = Term.default_exits;
+  (Term.(const rejq $ filter), Term.info "rejq" ::doc ::version ::exits)
+};
 
-let msg = "Hello Reason!";
-
-print_string msg;
-
-print_newline ();
-
-print_string "!!!!!!\n";
+let () = Cmdliner.Term.(exit @@ eval cmd);
