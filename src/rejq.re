@@ -1,4 +1,10 @@
-let rejq filter => Printf.printf "got filter '%s'" filter;
+let rejq filter => {
+  Printf.printf "got filter '%s'" filter;
+  let data = Core.Std.(In_channel.input_all In_channel.stdin);
+  let json = Yojson.Basic.from_string data;
+  let str = Yojson.Basic.Util.(json |> to_string);
+  print_string str
+};
 
 let filter = {
   open Cmdliner;

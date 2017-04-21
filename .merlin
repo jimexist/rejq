@@ -5,6 +5,7 @@ PKG topkg reason # the OPAM packages
 B ./_build/src # built artifacts location
 S ./src # source location
 PKG menhirLib
+PKG core
 PKG yojson
 PKG reason
 PKG topkg

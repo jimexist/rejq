@@ -8,6 +8,7 @@ let () =
     OS.Cmd.run @@ Cmd.(ocamlbuild % "-use-ocamlfind"
                                   %% (v "-I" % "src")
                                   %% (v "-pkg" % "yojson")
+                                  %% (v "-pkg" % "core")
                                   %% (v "-pkg" % "cmdliner")
                                   %% (v "-pkg" % "menhirLib")
                                   %% of_list files)
