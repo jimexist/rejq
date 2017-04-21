@@ -1,8 +1,8 @@
 let rejq filter => {
   Printf.printf "got filter '%s'" filter;
-  let data = Core.Std.(In_channel.input_all In_channel.stdin);
+  let data = CCIO.read_all stdin;
   let json = Yojson.Basic.from_string data;
-  let str = Yojson.Basic.Util.(json |> to_string);
+  let str = Yojson.Basic.Util.(json |> member "1" |> to_string);
   print_string str
 };
 
