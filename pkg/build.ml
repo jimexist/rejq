@@ -5,13 +5,14 @@ open Topkg
 let () =
   let cmd c os files =
     let ocamlbuild = Conf.tool "rebuild" os in
-    OS.Cmd.run @@ Cmd.(ocamlbuild % "-use-ocamlfind"
-                                  %% (v "-I" % "src")
-                                  %% (v "-pkg" % "yojson")
-                                  %% (v "-pkg" % "containers")
-                                  %% (v "-pkg" % "cmdliner")
-                                  %% (v "-pkg" % "menhirLib")
-                                  %% of_list files)
+    OS.Cmd.run @@ Cmd.(ocamlbuild % "-use-menhir"
+                       % "-use-ocamlfind"
+                       %% (v "-tag" % "thread")
+                       %% (v "-I" % "src")
+                       %% (v "-pkg" % "yojson")
+                       %% (v "-pkg" % "containers")
+                       %% (v "-pkg" % "cmdliner")
+                       %% of_list files)
   in
   let build = Pkg.build ~cmd () in
   Pkg.describe "rejq" ~build ~change_logs:[] ~licenses:[] ~readmes:[] (fun c ->
